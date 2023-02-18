@@ -1,4 +1,4 @@
-<p>Email: </p>
+<p>Email:</p>
 <input type="text" [formControl]="email" />
-
+<p *ngIf="email.value">Value: {{ email.value }}</p>
 <button type="button" (click)="changeValue()">Click me to change value</button>

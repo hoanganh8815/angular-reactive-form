@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 import { EmailInputComponent } from './email-input/email-input.component';
+import { MultipleInputComponent } from './multiple-input/multiple-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NameEditorComponent,
     ProfileEditorComponent,
-    EmailInputComponent
+    EmailInputComponent,
+    MultipleInputComponent
   ],
   imports: [
     BrowserModule,
