@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-email-input',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class EmailInputComponent {
 
+  email = new FormControl('');
+
+  changeValue(){
+    this.email.setValue("nhanh36@gmail.com");
+  }
 }
