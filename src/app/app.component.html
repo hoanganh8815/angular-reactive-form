@@ -2,7 +2,9 @@
 
 <nav>
   <button type="button" (click)="toggleEditor('name')">Name Editor</button>
-  <button type="button" (click)="toggleEditor('profile')">Profile Editor</button>
+  <button type="button" (click)="toggleEditor('profile')">
+    Profile Editor
+  </button>
 </nav>
 
 <app-name-editor *ngIf="showNameEditor"></app-name-editor>
@@ -11,6 +13,7 @@
 
 <app-email-input></app-email-input>
 
+<app-multiple-input></app-multiple-input>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
