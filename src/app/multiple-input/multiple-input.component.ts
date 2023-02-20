@@ -21,4 +21,13 @@ export class MultipleInputComponent {
   onSubmit() {
     console.warn(this.multiFormGroup.value);
   }
+
+  updateProfile(){
+    this.multiFormGroup.patchValue({
+      firstName: 'Nancy',
+      address:{
+        street: '1123 Drew Street'
+      }
+    })
+  }
 }
