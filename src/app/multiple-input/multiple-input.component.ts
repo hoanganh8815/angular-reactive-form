@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-multiple-input',
@@ -20,19 +20,16 @@ export class MultipleInputComponent {
     aliases: this.fb.array([this.fb.control('')]),
   });
 
-  // new FormGroup({
-  //   firstName: new FormControl(''),
-  //   lastName: new FormControl(''),
-  //   address: new FormGroup({
-  //     street: new FormControl(''),
-  //     city: new FormControl(''),
-  //     state: new FormControl(''),
-  //     zip: new FormControl(''),
-  //   }),
-  // });
+  get aliases(){
+    return this.multiFormGroup.get('aliases') as FormArray;
+  }
 
   onSubmit() {
     console.warn(this.multiFormGroup.value);
+  }
+
+  addAlias(){
+    this.aliases.push(this.fb.control(''));
   }
 
   updateProfile() {
@@ -40,6 +37,7 @@ export class MultipleInputComponent {
       firstName: 'Nancy',
       address: {
         street: '1123 Drew Street',
+        city: 'Los angeles'
       },
     });
   }
